@@ -29,8 +29,26 @@ void DeterministicFiniteAutomata::setStartState(int n)
 }
 void DeterministicFiniteAutomata::setAlphabet(string s)
 {
-	for(int i =0;i<s.length();i++)
-		alphabet.push_back(s[i]);
+	if(s[0]=='[' && s[4] ==']')
+	{
+		for(char c = s[1] ;  c <=s[3];c++)
+			alphabet.push_back(c);
+		
+		for(int i =5;i<s.length();i++)
+			{
+				alphabet.push_back(s[i]);
+		
+			}
+		
+	}
+	else
+	{
+		for(int i =0;i<s.length();i++)
+			{
+				alphabet.push_back(s[i]);
+		
+			}
+	}	
 	
 }
 

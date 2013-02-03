@@ -49,8 +49,8 @@ int State::getNextState(char c)
 		return nextState;
 	  }
 	  catch (out_of_range){
-		 cout<<"exception id:"<<this->_id<<" -- "<<c;  
-	    return -1;
+		 cout<<"Trap state "<<" : aborting  string:rejected";  
+	    exit(0);
 	}
 }
 
